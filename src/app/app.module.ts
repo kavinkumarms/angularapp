@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertComponent } from './alert/alert.component';
 import { MatDialogModule } from '@angular/material/dialog'; 
 import {MatButtonModule} from '@angular/material/button';
-
+import {  HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,8 +17,10 @@ import {MatButtonModule} from '@angular/material/button';
   ],
   imports: [
     BrowserModule,
+   
     AppRoutingModule,
     MatButtonModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
     DialogModule
