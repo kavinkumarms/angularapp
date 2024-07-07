@@ -9,6 +9,7 @@ import { AlertComponent } from './alert/alert.component';
 import { MatDialogModule } from '@angular/material/dialog'; 
 import {MatButtonModule} from '@angular/material/button';
 import {  HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import {  HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
    
     AppRoutingModule,
     MatButtonModule,

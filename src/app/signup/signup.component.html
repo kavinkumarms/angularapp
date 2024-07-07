@@ -12,18 +12,21 @@
 
 
 <div class="container signup-container">
-  <form class="signup-form">
+  <form [formGroup]="userForm" class="signup-form">
     <h2 class="signup-heading">Sign Up</h2>
     <div class="form-group">
-      <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+      <input formControlName="name" type="text" class="form-control" id="fullName" placeholder="Full Name" required>
     </div>
     <div class="form-group">
-      <input type="email" class="form-control" id="email" placeholder="Email address" required>
+      <input formControlName="email" type="email" class="form-control" id="email" placeholder="Email address" required>
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" id="password" placeholder="Password" required>
+      <input formControlName="phoneNumber" type="email" class="form-control" id="Phone Number" placeholder="Phone Number" required>
     </div>
-    <button (click)="submit()" type="submit" class="btn btn-block">Sign Up</button>
+    <div class="form-group">
+      <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password" required>
+    </div>
+    <button (click)="submit()" [disabled]="userForm.invalid" type="submit" class="btn btn-block">Sign Up</button>
   </form>
 </div>
 
